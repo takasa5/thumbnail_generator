@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>☆YouTubeサムネイルジェネレータ☆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="lib/cropper.min.js"></script>
+    <link  href="lib/cropper.min.css" rel="stylesheet">
+    <script src="lib/jquery-cropper.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="modal">
+        <div class="overLay"></div>
+        <div class="inner">
+            <button class="btn" onclick="trimming();" type="button">トリミング</button>
+        </div>
+    </div>
+    <h1>☆YouTubeサムネイルジェネレータ☆</h1>
+    <br>
+    <b>①好きな画像を選択し、トリミングする</b>
+    <br>
+    <input style="" multiple type="file" name="image_data" id="image_data" placeholder="ファイルを選択してください" accept="image/jpeg">
+    <br>
+    <b>②好きな文字列を入力する</b>
+    <br>
+    <textarea id="textBox" onkeyup="putCharVertically(this.value);" value=""></textarea>
+    <br>
+    <b>③文字列の大きさと位置を調整する</b>
+    <br>
+    開始x:<input style="width: 3em;" type="number" id="startX" value="330">
+    開始y:<input style="width: 3em;" type="number" id="startY" value="60">
+    文字サイズ:<input style="width: 3em;" type="number" id="numBox" value="100">
+    <br>
+    <b>④右クリック(長くタップ)して保存する</b>
+    <br>
+    <canvas id="cvs" width="1280" height="720"></canvas>
+    
+</body>
+</html>
