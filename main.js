@@ -95,6 +95,12 @@ $(document).ready(function () {
     $("#image_data").change(function() {
         image.readAsDataURL(this.files[0]);
     });
+    $(".overLay").click(function(){
+        $(this).parents(".modal").fadeOut();
+        $("#rimg").cropper("destroy");
+        $("#rimg").remove();
+        return false;
+    });
 });
 
 function trimming() {
